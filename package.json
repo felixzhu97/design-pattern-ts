@@ -1,0 +1,39 @@
+{
+  "name": "design-pattern-ts",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of all design patterns categorized by Creational, Structural, and Behavioral",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "watch": "tsc -w",
+    "demo:all": "npm run build && npm run start",
+    "demo:creational": "ts-node -e \"import('./src/Creational').then(m => m.demonstrateAllCreationalPatterns())\"",
+    "demo:structural": "ts-node -e \"import('./src/Structural').then(m => m.demonstrateAllStructuralPatterns())\"",
+    "demo:behavioral": "ts-node -e \"import('./src/Behavioral').then(m => m.demonstrateAllBehavioralPatterns())\""
+  },
+  "keywords": [
+    "design-patterns",
+    "typescript",
+    "creational",
+    "structural",
+    "behavioral"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}
